@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "scripts": {
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:debug": "playwright test --debug",
+    "e2e:test": "cross-env ENV=test playwright test",
+    "e2e:test:ui": "cross-env ENV=test playwright test --ui",
+    "e2e:test:headed": "cross-env ENV=test playwright test --headed",
+    "e2e:test:debug": "cross-env ENV=test playwright test --debug",
+    "e2e:dev": "cross-env ENV=dev playwright test",
+    "e2e:dev:ui": "cross-env ENV=dev playwright test --ui",
+    "e2e:dev:headed": "cross-env ENV=dev playwright test --headed",
+    "e2e:dev:debug": "cross-env ENV=dev playwright test --debug",
+    "auth:test": "cross-env ENV=test node global-setup.js",
+    "auth:dev": "cross-env ENV=dev node global-setup.js",
+    "auth:all": "npm run auth:test && npm run auth:dev"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.6.1"
+  }
+}
